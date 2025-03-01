@@ -27,7 +27,7 @@ def create_window():
         system_prompt = system_prompt_entry.get()
         messages.clear()  # Очищаем историю, чтобы начать с новым промтом
         messages.append({"role": "system", "content": system_prompt}) # Устанавливаем системный промт в истории
-        messages.append({"role": "user", "content": "Привет"}) # Добавляем приветствие после промта
+        messages.append({"role": "user", "content": "HEllo"}) # Добавляем приветствие после промта
     system_prompt_button = tk.Button(window, text="Установить промт", command=set_system_prompt)
     system_prompt_button.pack(pady=10)
 
