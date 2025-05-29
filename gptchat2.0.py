@@ -3,7 +3,7 @@ from tkinter import scrolledtext, ttk, messagebox
 from g4f.client import Client
 import threading
 import pyodbc
-
+#Степанов Руслан
 # Настройки подключения к MSSQL
 DB_CONFIG = {
     'server': 'BASESRV\sqlexpress',
@@ -90,7 +90,7 @@ class ChatApp:
                 messagebox.showerror("Ошибка", f"Не удалось сохранить сообщение: {e}")
             finally:
                 conn.close()
-    
+    #Слепцов Евгений и Семёнов Юрий
     def setup_ui(self):
         """Настраивает пользовательский интерфейс"""
         # Стилизация
@@ -214,7 +214,7 @@ class ChatApp:
         
         # Получаем ответ от ИИ
         threading.Thread(target=self.get_ai_response, args=(message,), daemon=True).start()
-    
+    #Лаптев Никита и Цвикальский Артём
     def get_ai_response(self, user_message):
         """Получает ответ от ИИ и сохраняет в MSSQL"""
         try:
