@@ -1,2 +1,4 @@
 g4f[all]
 tkinter
+threading
+pyodbc
