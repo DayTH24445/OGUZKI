@@ -4,6 +4,7 @@ from g4f.client import Client
 import threading
 import pyodbc
 
+# Степанов Руслан
 # Настройки подключения к MSSQL
 DB_CONFIG = {
     'server': 'BASESRV\sqlexpress',
@@ -12,9 +13,11 @@ DB_CONFIG = {
     'password': 'basa27'
 }
 
+# Цвикальский Артём
 client = Client()
 current_language = "ru"  # Текущий язык (ru/en)
 
+# Лаптев Никита
 class ChatApp:
     def __init__(self, root):
         self.root = root
@@ -27,6 +30,7 @@ class ChatApp:
         # Загрузка истории при старте
         self.load_history()
     
+    # Степанов Руслан
     def create_connection(self):
         """Автоматическое подключение к MSSQL с подбором драйвера"""
         drivers = [
@@ -239,6 +243,7 @@ class ChatApp:
                 f"Не удалось получить ответ: {str(e)}"
             ))
     
+    # Цвикальский Артём
     def update_chat_display(self):
         """Обновляет отображение чата"""
         self.chat_history.config(state=tk.NORMAL)
@@ -272,6 +277,7 @@ class ChatApp:
                 "Language changed. Restart the application for full effect."
             )
     
+    # Цвикальский Артём
     def update_ui_language(self):
         """Обновляет язык интерфейса"""
         # Обновляем вкладки
