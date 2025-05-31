@@ -4,8 +4,6 @@ from g4f.client import Client
 import threading
 import pyodbc
 
-
-    
 # Настройки подключения к MSSQL
 DB_CONFIG = {
     'server': 'BASESRV\sqlexpress',
@@ -224,7 +222,7 @@ class ChatApp:
         try:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
-                messages=self.messages
+                messages=self.messages,
             )
             
             bot_response = response.choices[0].message.content
